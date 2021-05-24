@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="purple_200">@color/customBrown</color>
+    <color name="purple_500">@color/customBrown</color>
+    <color name="purple_700">@color/customBrown</color>
+    <color name="teal_200">@color/customBlue</color>
+    <color name="teal_700">@color/customBlue</color>
+    <color name="black">@color/customBlack</color>
+    <color name="white">@color/customWhite</color>
+
+    <color name="customWhite">#F6E8EA</color>
+    <color name="customRed">#EF626C</color>
+    <color name="customBrown">#22181C</color>
+    <color name="customBlack">#312F2F</color>
+    <color name="customBlue">#84DCCF</color>
+
+</resources>
