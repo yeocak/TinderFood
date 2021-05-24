@@ -21,7 +21,7 @@ class SettingsActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get(SettingsActivityViewModel::class.java)
 
         binding.btnGoGithub.setOnClickListener {
-            val link = "https://github.com"
+            val link = "https://github.com/yeocak/TinderFood"
             val intentAction = Intent(Intent.ACTION_VIEW, Uri.parse(link))
             startActivity(intentAction)
         }
