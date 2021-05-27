@@ -1,22 +1,18 @@
 package com.yeocak.tinderfood.ui.likedfoods
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.yeocak.simpleimageload.SimpleImageLoad.loadImage
 import com.yeocak.tinderfood.databinding.SingleFoodMenuBinding
 import com.yeocak.tinderfood.R
 import com.yeocak.tinderfood.database.SavedRecipeRepository
-import com.yeocak.tinderfood.model.Photo
 import com.yeocak.tinderfood.model.SavedRecipe
 import com.yeocak.tinderfood.model.recipes.Recipe
-import com.yeocak.tinderfood.utils.ImageProgress
 import kotlinx.coroutines.*
 
 class LikedFoodsAdapter(
@@ -57,18 +53,7 @@ class LikedFoodsAdapter(
     private fun setMenu(holder: LikedFoodsViewHolder, current: Recipe){
         with(holder.binding){
 
-            CoroutineScope(Dispatchers.Main).launch {
-                var currentPhoto: Photo?
-
-                withContext(Dispatchers.IO){
-                    currentPhoto = ImageProgress.takeImage(current.image, context)
-                }
-
-                Glide.with(context)
-                    .load(currentPhoto?.photoLink)
-                    .transform(RoundedCorners(50))
-                    .into(ivMenuFoodPhoto)
-            }
+            ivMenuFoodPhoto.loadImage(current.image, context) // Round corners 50
 
             star(holder, current.uid, current.title)
 

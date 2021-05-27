@@ -5,15 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.yeocak.simpleimageload.SimpleImageLoad.loadImage
 import com.yeocak.tinderfood.databinding.SingleFoodCardBinding
 import com.yeocak.tinderfood.R
 import com.yeocak.tinderfood.model.DiscoverCard
-import com.yeocak.tinderfood.model.Photo
 import com.yeocak.tinderfood.model.VeganType
-import com.yeocak.tinderfood.utils.ImageProgress
-import kotlinx.coroutines.*
 
 class SwipeCardsAdapter(
     private val cardList: MutableList<DiscoverCard>,
@@ -43,18 +39,7 @@ class SwipeCardsAdapter(
             tvServings.text = current.serving
             tvIngredients.text = current.ingredients
 
-            CoroutineScope(Dispatchers.Main).launch {
-                var currentPhoto: Photo?
-
-                withContext(Dispatchers.IO){
-                    currentPhoto = ImageProgress.takeImage(current.photoLink, context)
-                }
-
-                Glide.with(context.applicationContext)
-                    .load(currentPhoto?.photoLink)
-                    .transform(RoundedCorners(50))
-                    .into(ivFoodPhoto)
-            }
+            ivFoodPhoto.loadImage(current.photoLink, context) // Round corners 50
 
 
             when(current.vegan){

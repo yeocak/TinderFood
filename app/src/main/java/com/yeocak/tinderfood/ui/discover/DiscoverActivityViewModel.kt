@@ -35,8 +35,10 @@ class DiscoverActivityViewModel: ViewModel() {
             .create(FoodService::class.java)
 
         foodResponse = liveData {
-            val response = retService.getFood()
+            val response: Response<RetrofitRandomFood>? = retService.getFood()
+            if (response != null) {
                 emit(response)
+            }
         }
     }
 }

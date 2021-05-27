@@ -47,9 +47,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    //Glide
-    implementation 'com.github.bumptech.glide:glide:4.12.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    //Simple Image Loader
+    implementation 'com.github.yeocak:SimpleImageLoader:0.3.0'
 
     //Swipe cards
     implementation 'com.github.yuyakaido:cardstackview:2.3.4'
