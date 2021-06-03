@@ -1,6 +1,6 @@
 # A food suggestion app like Tinder
 
-### This is a practice app. In this app, you can find random recipes and choose the ones you like. 
+### This is a practice app. In this app, you can find random recipes and choose the ones you like.
 
 #### This is main menu. You can also add a recipe to your favorites and access it quickly from the main menu.
 
@@ -13,3 +13,6 @@
 #### These are Liked Foods list and Setting page. In liked foods page you can see detailes of the recipe.
 
 ![](https://raw.githubusercontent.com/yeocak/TinderFood/master/photos_for_github/both_liked_settings.png)
+
+
+[Spoonacular Api](https://spoonacular.com/food-api)  was used in this project.
