@@ -6,7 +6,7 @@
 
 ![](https://raw.githubusercontent.com/yeocak/TinderFood/master/photos_for_github/maingif.gif)
 
-#### This is discover page. You can search 15 random food and you can make your list by throwing the your liked recipes to the right and the ones you don't liked.
+#### This is discover page. You can search 15 random food and you can make your list by throwing the your liked recipes to the right and the ones you disliked to the left.
 
 ![](https://raw.githubusercontent.com/yeocak/TinderFood/master/photos_for_github/discovergif.gif)
 
